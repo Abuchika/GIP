@@ -1,11 +1,10 @@
-import React from "react";
+//EployeeTable.js
 
 export default function EmployeeTable({ employees, onEdit, onView }) {
   return (
     <table border={1} cellPadding={5} style={{ marginTop: 20, width: "100%" }}>
       <thead>
         <tr>
-          {/* Show only main fields on table */}
           <th>Name</th>
           <th>Suffix</th>
           <th>GIP ID</th>
@@ -36,10 +35,10 @@ export default function EmployeeTable({ employees, onEdit, onView }) {
           <th>Actions</th>
         </tr>
       </thead>
-      <tbody>
+            <tbody>
         {employees.length === 0 && (
           <tr>
-            <td colSpan={30} align="center">
+            <td colSpan={28} align="center">
               No employees added.
             </td>
           </tr>
@@ -47,7 +46,8 @@ export default function EmployeeTable({ employees, onEdit, onView }) {
         {employees.map((emp) => (
           <tr key={emp.gipId}>
             <td>{emp.name}</td>
-            <td>{emp.gipId}</td>
+            <td>{emp.suffix}</td>         {/* Added suffix here */}
+            <td>{emp.gipId}</td>          {/* gipId in 3rd column */}
             <td>{emp.address}</td>
             <td>{emp.telephoneNumber}</td>
             <td>{emp.mobileNumber}</td>

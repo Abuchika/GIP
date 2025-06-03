@@ -1,4 +1,4 @@
-import React from 'react';
+//EmpleeFrom.js
 
 export default function EmployeeForm({ formData, setFormData, onSubmit, onCancel, mode }) {
   function handleChange(e) {
